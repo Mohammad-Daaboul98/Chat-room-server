@@ -17,7 +17,7 @@ export default async ({ req, res, log, error }) => {
   .setKey(API_KEY);
 
   if (req.method == "GET") {
-    
+
     const promise = databases.createCollection(
       DATABASE_ID,
       sdk.ID.unique(),
@@ -28,7 +28,7 @@ export default async ({ req, res, log, error }) => {
         return res.send(response);
       },
       function (error) {
-       return log(error);
+       return res.send(error);
       }
     );
   }
