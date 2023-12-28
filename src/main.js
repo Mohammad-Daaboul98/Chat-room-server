@@ -5,7 +5,7 @@
 // const API_KEY = process.env.API_KEY;
 
 export default async ({ req, res, log, error }) => {
-  res.send('hi');
+  return res.send('hi');
   // const sdk = require("node-appwrite");
 
   // Init SDK
