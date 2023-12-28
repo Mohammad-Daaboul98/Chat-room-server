@@ -14,7 +14,7 @@ export default async ({ req, res, log, error }) => {
   // client.setEndpoint(API_ENDPOINT).setProject(PROJECT_ID).setKey(API_KEY);
 
 
-  if (req.method == "POST") {
+  if (req.method == "POST" && req.headers['content-type'] === 'application/x-www-form-urlencoded') {
     // const room_name = req.bodyRaw
     // const response = await databases.createCollection(
     //   DATABASE_ID,
