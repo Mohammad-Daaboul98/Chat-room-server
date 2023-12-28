@@ -15,12 +15,12 @@ export default async ({ req, res, log, error }) => {
 
 
   if (req.method == "POST") {
-    const room_name = req.body.name
-    const response = await databases.createCollection(
-      DATABASE_ID,
-      ID.unique(),
-      room_name
-    );
-    return res.send(response.name)
+    const room_name = req.bodyRaw
+    // const response = await databases.createCollection(
+    //   DATABASE_ID,
+    //   ID.unique(),
+    //   room_name
+    // );
+    return res.send(room_name)
   }
 };
