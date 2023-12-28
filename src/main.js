@@ -1,4 +1,4 @@
-import { Client ,Databases } from "node-appwrite";
+// import { Client ,Databases } from "node-appwrite";
 // const API_ENDPOINT = process.env.API_ENDPOINT;
 // const PROJECT_ID = process.env.PROJECT_ID;
 // const DATABASE_ID = process.env.DATABASE_ID;
