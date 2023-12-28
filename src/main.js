@@ -8,14 +8,14 @@ export default async ({ req, res, log, error }) => {
   // const sdk = require("node-appwrite");
 
   // Init SDK
-  const client = new Client();
+  // const client = new Client();
 
-  const databases = new Databases(client);
+  // const databases = new Databases(client);
 
-  client
-  .setEndpoint(API_ENDPOINT)
-  .setProject(PROJECT_ID)
-  .setKey(API_KEY);
+  // client
+  // .setEndpoint(API_ENDPOINT)
+  // .setProject(PROJECT_ID)
+  // .setKey(API_KEY);
 
   if (req.method == "GET") {
     res.send(API_KEY);
