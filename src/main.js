@@ -18,7 +18,7 @@ export default async ({ req, res, log, error }) => {
   .setKey(API_KEY);
 
   if (req.method == "GET") {
-    console.log(API_KEY);
+    res.send(API_KEY);
     // const promise = databases.createCollection(
     //   DATABASE_ID,
     //   sdk.ID.unique(),
