@@ -1,8 +1,8 @@
 import { Client ,Databases } from "node-appwrite";
-const API_ENDPOINT = process.env.API_ENDPOINT;
-const PROJECT_ID = process.env.PROJECT_ID;
-const DATABASE_ID = process.env.DATABASE_ID;
-const API_KEY = process.env.API_KEY;
+// const API_ENDPOINT = process.env.API_ENDPOINT;
+// const PROJECT_ID = process.env.PROJECT_ID;
+// const DATABASE_ID = process.env.DATABASE_ID;
+// const API_KEY = process.env.API_KEY;
 
 export default async ({ req, res, log, error }) => {
   // const sdk = require("node-appwrite");
