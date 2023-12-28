@@ -1,9 +1,8 @@
 const sdk = require('node-appwrite');
-
-const API_ENDPOINT =process.env.API_ENDPOINT
-const PROJECT_ID =process.env.PROJECT_ID
-const DATABASE_ID =process.env.DATABASE_ID
-const API_KEY =process.env.API_KEY
+const API_ENDPOINT = process.env.API_ENDPOINT
+const PROJECT_ID = process.env.PROJECT_ID
+const DATABASE_ID = process.env.DATABASE_ID
+const API_KEY = process.env.API_KEY
 
 export default async ({ req, res, log, error }) => {
 
@@ -18,11 +17,11 @@ export default async ({ req, res, log, error }) => {
         .setKey(API_KEY) 
     ;
     
-    const promise = databases.createCollection(DATABASE_ID,sdk.ID.unique(),'privateRoom');
     if(req.method == 'GET'){
+    const promise = databases.createCollection(DATABASE_ID,sdk.ID.unique(),'privateRoom');
         promise.then(function (response) {
             log(response);
-            res.send(response)
+            res.send('hi')
         }, function (error) {
             log(error);
         });
