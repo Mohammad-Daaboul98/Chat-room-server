@@ -73,7 +73,7 @@ export default async function ({ req, res ,log }) {
 
     // const databases = new Databases(client);
     // const document = await databases.createDocument('[DATABASE_ID]', '[MESSAGES_COLLECTION_ID]', ID.unique(), message);
-    log(message);
+    log(message.name);
     return res.send("Message sent");
   }
 
