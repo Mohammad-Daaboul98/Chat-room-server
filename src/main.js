@@ -7,15 +7,15 @@ const API_KEY = process.env.API_KEY;
 
 export default async ({ req, res, log, error }) => {
   // Init SDK
-  const client = new Client();
+  // const client = new Client();
 
-  const databases = new Databases(client);
+  // const databases = new Databases(client);
 
-  client.setEndpoint(API_ENDPOINT).setProject(PROJECT_ID).setKey(API_KEY);
+  // client.setEndpoint(API_ENDPOINT).setProject(PROJECT_ID).setKey(API_KEY);
 
 
   if (req.method == "POST") {
-    const room_name = req.bodyRaw
+    // const room_name = req.bodyRaw
     // const response = await databases.createCollection(
     //   DATABASE_ID,
     //   ID.unique(),
