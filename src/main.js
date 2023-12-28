@@ -21,7 +21,7 @@ export default async ({ req, res, log, error }) => {
     //   ID.unique(),
     //   room_name
     // );
-    log(req.body.name);                     // Raw request body, contains request data
+    log(req.query);                     // Raw request body, contains request data
 
 
     return res.send("All the request parameters are logged to the Appwrite Console.");
