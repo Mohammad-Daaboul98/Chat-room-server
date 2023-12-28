@@ -1,5 +1,4 @@
 import { Client, Databases, ID } from "node-appwrite";
-import querystring from 'node:querystring';
 
 // const sdk = require("node-appwrite");
 const API_ENDPOINT = process.env.API_ENDPOINT;
@@ -23,11 +22,10 @@ export default async ({ req, res, log, error }) => {
     //   ID.unique(),
     //   room_name
     // );
-    const formData = querystring.parse(req.body);
+    const formData = req.body;
 
     log(formData);
-    log(req.body);
-    log(req.body.name);              
+    log(formData.name);              
 
 
     return res.send("All the request parameters are logged to the Appwrite Console.");
