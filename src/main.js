@@ -18,19 +18,20 @@ export default async ({ req, res, log, error }) => {
   .setKey(API_KEY);
 
   if (req.method == "GET") {
-    const promise = databases.createCollection(
-      DATABASE_ID,
-      sdk.ID.unique(),
-      "privateRoom"
-    );
-    promise.then(
-      function (response) {
-        // log(response);
-        res.send("hi");
-      },
-      function (error) {
-        // log(error);
-      }
-    );
+    console.log(API_KEY);
+    // const promise = databases.createCollection(
+    //   DATABASE_ID,
+    //   sdk.ID.unique(),
+    //   "privateRoom"
+    // );
+    // promise.then(
+    //   function (response) {
+    //     // log(response);
+    //     res.send("hi");
+    //   },
+    //   function (error) {
+    //     // log(error);
+    //   }
+    // );
   }
 };
