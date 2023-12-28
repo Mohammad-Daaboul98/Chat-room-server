@@ -1,4 +1,6 @@
 import { Client, Databases, ID } from "node-appwrite";
+import querystring from 'node:querystring';
+
 // const sdk = require("node-appwrite");
 const API_ENDPOINT = process.env.API_ENDPOINT;
 const PROJECT_ID = process.env.PROJECT_ID;
