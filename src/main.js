@@ -14,18 +14,11 @@ export default async ({ req, res, log, error }) => {
   client.setEndpoint(API_ENDPOINT).setProject(PROJECT_ID).setKey(API_KEY);
 
   if (req.method == "GET") {
-    const promise = databases.createCollection(
+    const response = await databases.createCollection(
       DATABASE_ID,
       ID.unique(),
       "privateRoom"
     );
-    promise.then(
-      function (response) {
-        return res.send(response);
-      },
-      function (error) {
-        return res.send(error);
-      }
-    );
+    return res.send('hi')
   }
 };
