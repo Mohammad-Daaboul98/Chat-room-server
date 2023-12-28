@@ -48,7 +48,7 @@ const html = `<!doctype html>
   </body>
 </html>`;
 
-export default async function ({ req, res }) {
+export default async function ({ req, res ,log }) {
   if (req.method === "GET") {
     return res.send(html, 200, { "content-type": "text/html" });
   }
