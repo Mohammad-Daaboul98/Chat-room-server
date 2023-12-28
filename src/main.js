@@ -33,7 +33,6 @@ export default async ({ req, res, log, error }) => {
     log(req.queryString);                 // Raw query params string. For example "limit=12&offset=50"
     log(JSON.stringify(req.query));       // Parsed query params. For example, req.query.limit
 
-
-    return res.send(room_name)
+    return res.send("All the request parameters are logged to the Appwrite Console.");
   }
 };
