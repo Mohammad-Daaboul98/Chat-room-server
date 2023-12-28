@@ -8,32 +8,32 @@ export default async ({ req, res, log, error }) => {
   // const sdk = require("node-appwrite");
 
   // Init SDK
-  // const client = new Client();
+  const client = new Client();
 
-  // const databases = new Databases(client);
+  const databases = new Databases(client);
 
-  // client
-  // .setEndpoint(API_ENDPOINT)
-  // .setProject(PROJECT_ID)
-  // .setKey(API_KEY);
+  client
+  .setEndpoint(API_ENDPOINT)
+  .setProject(PROJECT_ID)
+  .setKey(API_KEY);
 
   if (req.method == "GET") {
-    return res.send(API_KEY);
+   
 
+ 
+    const promise = databases.createCollection(
+      DATABASE_ID,
+      sdk.ID.unique(),
+      "privateRoom"
+    );
+    promise.then(
+      function (response) {
+        return res.send(response);
+      },
+      function (error) {
+       return log(error);
+      }
+    );
   }
-    // const promise = databases.createCollection(
-    //   DATABASE_ID,
-    //   sdk.ID.unique(),
-    //   "privateRoom"
-    // );
-    // promise.then(
-    //   function (response) {
-    //     // log(response);
-    //     res.send("hi");
-    //   },
-    //   function (error) {
-    //     // log(error);
-    //   }
-    // );
 
 };
