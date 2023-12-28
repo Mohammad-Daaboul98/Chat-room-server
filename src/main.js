@@ -24,7 +24,7 @@ export default async ({ req, res, log, error }) => {
     // );
     const formData = req.body;
 
-    log(formData.name);              
+    log(formData);              
 
 
     return res.send("All the request parameters are logged to the Appwrite Console.");
