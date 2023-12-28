@@ -21,11 +21,11 @@ export default async ({ req, res, log, error }) => {
     );
     promise.then(
       function (response) {
-        log(response);
+        // log(response);
         res.send("hi");
       },
       function (error) {
-        log(error);
+        // log(error);
       }
     );
   }
