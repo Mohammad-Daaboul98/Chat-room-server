@@ -5,6 +5,7 @@
 // const API_KEY = process.env.API_KEY;
 
 export default async ({ req, res, log, error }) => {
+  res.send('hi');
   // const sdk = require("node-appwrite");
 
   // Init SDK
@@ -17,8 +18,7 @@ export default async ({ req, res, log, error }) => {
   // .setProject(PROJECT_ID)
   // .setKey(API_KEY);
 
-  if (req.method == "GET") {
-    res.send('hi');
+  // if (req.method == "GET") {}
     // const promise = databases.createCollection(
     //   DATABASE_ID,
     //   sdk.ID.unique(),
@@ -33,5 +33,5 @@ export default async ({ req, res, log, error }) => {
     //     // log(error);
     //   }
     // );
-  }
+
 };
