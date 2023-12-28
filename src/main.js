@@ -12,13 +12,15 @@ export default async ({ req, res, log, error }) => {
   const databases = new Databases(client);
 
   client.setEndpoint(API_ENDPOINT).setProject(PROJECT_ID).setKey(API_KEY);
-  const response = await databases.createCollection(
-    DATABASE_ID,
-    ID.unique(),
-    "privateRoom"
-  );
 
-  if (req.method == "GET") {
+
+  if (req.method == "POST") {
+    const room_name = req.body.name
+    const response = await databases.createCollection(
+      DATABASE_ID,
+      ID.unique(),
+      room_name
+    );
     return res.send(response.name)
   }
 };
