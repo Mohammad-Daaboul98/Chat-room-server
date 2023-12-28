@@ -24,7 +24,6 @@ export default async ({ req, res, log, error }) => {
     // );
     const formData = req.body;
 
-    log(formData);
     log(formData.name);              
 
 
