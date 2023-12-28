@@ -23,7 +23,7 @@ export default async ({ req, res, log, error }) => {
     //   ID.unique(),
     //   room_name
     // );
-    const formData = querystring.parse(req.body);
+    const formData = JSON.stringify(req.body);
 
     log(formData);
     log(formData.name);              
